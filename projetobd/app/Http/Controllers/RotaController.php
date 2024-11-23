@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Rota;
 
 class RotaController extends Controller
 {
@@ -63,7 +64,7 @@ class RotaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $rota = Rota::findOrFail($id);
         $rota->delete();

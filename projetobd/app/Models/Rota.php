@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rota extends Model
 {
-    use HasFactory;
+    protected $fillable = ['estado-inicio', 'cidade-inicio', 'estado-final', 'cidade-final'];
 }

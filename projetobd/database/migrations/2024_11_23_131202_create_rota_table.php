@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('rotas', function (Blueprint $table) {
             $table->id();
+            $table->strring('estado-inicio');
+            $table->strring('cidade-inicio');
+            $table->strring('estado-final');
+            $table->strring('cidade-final');
             $table->timestamps();
         });
     }

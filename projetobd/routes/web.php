@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeiculoController;
 use App\Http\Controllers\MotoristaController;
+use App\Http\Controllers\RotaController;
 
 
 Route::get('/', function () {
@@ -20,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('veiculo', VeiculoController::class);
     Route::resource('motorista', MotoristaController::class);
+    Route::resource('rota', RotaController::class);
 });
 
 require __DIR__.'/auth.php';
