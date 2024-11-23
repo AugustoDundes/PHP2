@@ -3,17 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Veiculo;
 
-class VeiculoController extends Controller
+class MotoristaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $veiculo = Veiculo::all();
-        return view("veiculo.index", compact('veiculo'));
+        $motorista = Motorista::all();
+        return view("motorista.index", compact('motorista'));
     }
 
     /**
@@ -21,7 +20,7 @@ class VeiculoController extends Controller
      */
     public function create()
     {
-        return view("veiculo.create");
+        return view("motorista.create");
     }
 
     /**
@@ -29,8 +28,8 @@ class VeiculoController extends Controller
      */
     public function store(Request $request)
     {
-        Veiculo::create($request->all());
-        return redirect("/veiculo");
+        Motorista::create($request->all());
+        return redirect("/motorista");
     }
 
     /**
@@ -38,8 +37,8 @@ class VeiculoController extends Controller
      */
     public function show(string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        return view("veiculo.show", compact('veiculo'));
+        $motorista = Motorista::findOrFail($id);
+        return view("motorista.show", compact('motorista'));
     }
 
     /**
@@ -47,8 +46,8 @@ class VeiculoController extends Controller
      */
     public function edit(string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        return view("veiculo.edit", compact('veiculo'));
+        $motorista = Motorista::findOrFail($id);
+        return view("motorista.edit", compact('motorista'));
     }
 
     /**
@@ -56,9 +55,9 @@ class VeiculoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        $veiculo->update($request->all());
-        return redirect("/veiculo");
+        $motorista = Motorista::findOrFail($id);
+        $motorista->update($request->all());
+        return redirect("/motorista");
     }
 
     /**
@@ -66,8 +65,8 @@ class VeiculoController extends Controller
      */
     public function destroy($id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        $veiculo->delete();
-        return redirect("/veiculo");
+        $motorista = Motorista::findOrFail($id);
+        $motorista->delete();
+        return redirect("/motorista");
     }
 }

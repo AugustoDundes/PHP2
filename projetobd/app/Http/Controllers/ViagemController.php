@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Veiculo;
 
-class VeiculoController extends Controller
+class ViagemController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $veiculo = Veiculo::all();
-        return view("veiculo.index", compact('veiculo'));
+        //
     }
 
     /**
@@ -21,7 +19,7 @@ class VeiculoController extends Controller
      */
     public function create()
     {
-        return view("veiculo.create");
+        //
     }
 
     /**
@@ -29,8 +27,7 @@ class VeiculoController extends Controller
      */
     public function store(Request $request)
     {
-        Veiculo::create($request->all());
-        return redirect("/veiculo");
+        //
     }
 
     /**
@@ -38,8 +35,7 @@ class VeiculoController extends Controller
      */
     public function show(string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        return view("veiculo.show", compact('veiculo'));
+        //
     }
 
     /**
@@ -47,8 +43,7 @@ class VeiculoController extends Controller
      */
     public function edit(string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        return view("veiculo.edit", compact('veiculo'));
+        //
     }
 
     /**
@@ -56,18 +51,14 @@ class VeiculoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        $veiculo->update($request->all());
-        return redirect("/veiculo");
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
-        $veiculo = Veiculo::findOrFail($id);
-        $veiculo->delete();
-        return redirect("/veiculo");
+        //
     }
 }

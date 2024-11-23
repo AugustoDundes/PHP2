@@ -7,8 +7,12 @@
         @method('DELETE')
         <div class="row">
             <div class="col">
-                <label for="nome" class="form-label">Informe a veículo:</label>
-                <input type="text" name="nome" class="form-control" disabled/>
+                <label for="marca" class="form-label">Marca:</label>
+                <input type="text" name="marca" class="form-control" value="{{ $veiculo->marca }}" disabled/>
+                <label for="placa" class="form-label">Placa:</label>
+                <input type="text" name="placa" class="form-control" value="{{ $veiculo->placa }}" disabled/>
+                <label for="ano" class="form-label">Ano:</label>
+                <input type="text" name="ano" class="form-control" value="{{ $veiculo->ano }}" disabled/>
             </div>
         </div>
         <div class="row">

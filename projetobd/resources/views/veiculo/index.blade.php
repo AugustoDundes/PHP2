@@ -22,7 +22,11 @@
                 <td>{{ $c->ano }}</td>
                 <td>
                     <a href="/veiculo/{{ $c->id }}/edit" class="btn btn-warning">Alterar</a>
-                    <a href="/veiculo/{{ $c->id }}" class="btn btn-danger">Excluir</a>
+                    <form action="/veiculo/{{ $c->id }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
                 </td>
             </tr>
             @endforeach
