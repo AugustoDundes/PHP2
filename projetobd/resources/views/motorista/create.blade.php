@@ -1,8 +1,8 @@
 <x-app-layout>
 
-    <h5>Nova Rota</h5>
+    <h5>Nova motorista</h5>
 
-    <form action="/rota" method="POST">
+    <form action="/motorista" method="POST">
         @CSRF
         <div class="row">
             <div class="col">

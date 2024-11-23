@@ -18,10 +18,10 @@
         <tbody>
             @foreach($rota as $r)
             <tr>
-                <td>{{ $r->nome }}</td>
-                <td>{{ $r->habilitacao }}</td>
-                <td>{{ $r->telefone }}</td>
-                <td>{{ $r->idade }}</td>
+                <td>{{ $r->estado_inicio }}</td>
+                <td>{{ $r->cidade_inicio }}</td>
+                <td>{{ $r->estado_final }}</td>
+                <td>{{ $r->cidade_final }}</td>
                 <td>
                     <a href="/rota/{{ $r->id }}/edit" class="btn btn-warning">Alterar</a>
                     <form action="/rota/{{ $r->id }}" method="POST" style="display:inline;">

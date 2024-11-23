@@ -2,7 +2,7 @@
 
     <h5>Alterar Motorista</h5>
 
-    <form action="/motorista/{{ $motorista->$id }}" method="POST">
+    <form action="/motorista/{{ $motorista->id }}" method="POST">
         @CSRF
         @method('PUT')
         <div class="row">
