@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeiculoController;
+use App\Http\Controllers\MotoristaController;
+
 
 Route::get('/', function () {
     return view('welcome');
