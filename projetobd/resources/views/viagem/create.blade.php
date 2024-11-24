@@ -14,24 +14,14 @@
                 </select>
                 <label for="motorista_id" class="form-label">Informe o motorista:</label>
                 <select type="text" name="motorista_id" id="motorista_id" class="form-control">
-                <select type="text" name="motorista_id" id="motorista_id" class="form-control">
                     @foreach ($motorista as $motorista)
                         <option value="{{ $motorista->id }}">{{ $motorista->nome }}</option>
                     @endforeach
                 </select> 
-                <label for="rota_id" class="form-label">Informe a cidade inicial:</label>
-                <select type="text" name="rota_id" id="rota_id" class="form-control">
-                <select type="text" name="rota_id" id="rota_id" class="form-control">
-                    @foreach ($rota as $rota)
-                        <option value="{{ $rota->id }}">{{ $rota->cidade_inicio }}</option>
-                    @endforeach
-                </select>
-                </select> 
-                <label for="rota_id" class="form-label">Informe a cidade destino:</label>
-                <select type="text" name="rota_id" id="rota_id" class="form-control">
+                <label for="rota_id" class="form-label">Informe a rota:</label>
                 <select type="text" name="rota_id" id="rota_id" class="form-control">
                     @foreach ($rota as $rota)
-                        <option value="{{ $rota->id }}">{{ $rota->cidade_final }}</option>
+                        <option value="{{ $rota->id }}">{{ $rota->estado_inicio }} - {{ $rota->cidade_inicio }} -> {{ $rota->estado_final }} - {{ $rota->cidade_final }}</option>
                     @endforeach
                 </select>
                 <label for="data_viagem" class="form-label">Data da Viagem:</label>

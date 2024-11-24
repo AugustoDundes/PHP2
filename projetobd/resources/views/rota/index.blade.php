@@ -9,18 +9,22 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Estado de início</th>
-                <th>Cidade de início</th>
-                <th>Estado final</th>
-                <th>Cidade final</th>
+                <th>Origem</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach($rota as $r)
             <tr>
                 <td>{{ $r->estado_inicio }}</td>
+                <td>-</td>
                 <td>{{ $r->cidade_inicio }}</td>
+                <td>Destino -></td>
                 <td>{{ $r->estado_final }}</td>
+                <td>-</td>
                 <td>{{ $r->cidade_final }}</td>
                 <td>
                     <a href="/rota/{{ $r->id }}/edit" class="btn btn-warning">Alterar</a>
