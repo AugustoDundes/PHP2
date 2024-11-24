@@ -13,6 +13,28 @@ return new class extends Migration
     {
         Schema::create('viagems', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('veiculo_id');
+            $table->unsignedBigInteger('motorista_id');
+            $table->unsignedBigInteger('rota_id');
+            
+            // Definindo as chaves estrangeiras
+            $table->foreign('veiculo_id')
+                  ->references('id')
+                  ->on('veiculos')
+                  ->onDelete('restrict');
+                  
+            $table->foreign('motorista_id')
+                  ->references('id')
+                  ->on('motoristas')
+                  ->onDelete('restrict');
+                  
+            $table->foreign('rota_id')
+                  ->references('id')
+                  ->on('rotas')
+                  ->onDelete('restrict');
+
+            // Campo para a data do pedido
+            $table->date('data_pedido');
             $table->timestamps();
         });
     }

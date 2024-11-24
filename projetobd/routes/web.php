@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VeiculoController;
 use App\Http\Controllers\MotoristaController;
 use App\Http\Controllers\RotaController;
+use App\Http\Controllers\ViagemController;
 
 
 Route::get('/', function () {
@@ -22,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('veiculo', VeiculoController::class);
     Route::resource('motorista', MotoristaController::class);
     Route::resource('rota', RotaController::class);
+    Route::resource('viagem', ViagemController::class);
 });
 
 require __DIR__.'/auth.php';
