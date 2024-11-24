@@ -23,7 +23,8 @@
                 <td>{{ $v->motorista->nome }}</td>
                 <td>{{ $v->rota->cidade_inicio }}</td>
                 <td>{{ $v->rota->cidade_final }}</td>
-                <td>{{ \Carbon\Carrbon::parse($v->data_viagem)->format('d/m/y') }}</td>
+                <td>{{ \Carbon\Carbon::parse($v->data_viagem)->format('d/m/y') }}</td>
+                <td>
                     <a href="/viagem/{{ $v->id }}/edit" class="btn btn-warning">Alterar</a>
                     <form action="/viagem/{{ $v->id }}" method="POST" style="display:inline;">
                             @csrf

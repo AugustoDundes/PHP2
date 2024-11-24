@@ -73,9 +73,9 @@ class ViagemController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'veiculo_id' => 'required|exists:veiculo,id',
-            'motorista_id' => 'required|exists:motorista,id',
-            'rota_id' => 'required|exists:rota,id',
+            'veiculos_id' => 'required|exists:veiculo,id',
+            'motoristas_id' => 'required|exists:motorista,id',
+            'rotas_id' => 'required|exists:rota,id',
             'data_viagem' => 'required|date',
         ]);
 

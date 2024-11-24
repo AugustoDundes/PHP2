@@ -6,20 +6,23 @@
         @CSRF
         <div class="row">
             <div class="col">
-                <label for="veiculo_id" class="form-label">Informe a Marca:</label>
+                <label for="veiculo_id" class="form-label">Informe o Carro:</label>
                 <select type="text" name="veiculo_id" id="veiculo_id" class="form-control">
+                <option value="" disabled selected>Selecione um veículo</option>
                     @foreach ($veiculo as $veiculo)
-                        <option value="{{ $veiculo->id }}">{{ $veiculo->marca }}</option>
+                        <option value="{{ $veiculo->id }}">{{ $veiculo->marca }} - {{ $veiculo->placa }}</option>
                     @endforeach
                 </select>
                 <label for="motorista_id" class="form-label">Informe o motorista:</label>
                 <select type="text" name="motorista_id" id="motorista_id" class="form-control">
+                <option value="" disabled selected>Selecione um motorista</option>
                     @foreach ($motorista as $motorista)
-                        <option value="{{ $motorista->id }}">{{ $motorista->nome }}</option>
+                        <option value="{{ $motorista->id }}">{{ $motorista->nome }}, {{ $motorista->idade }} anos</option>
                     @endforeach
                 </select> 
                 <label for="rota_id" class="form-label">Informe a rota:</label>
                 <select type="text" name="rota_id" id="rota_id" class="form-control">
+                <option value="" disabled selected>Selecione uma rota</option>
                     @foreach ($rota as $rota)
                         <option value="{{ $rota->id }}">{{ $rota->estado_inicio }} - {{ $rota->cidade_inicio }} -> {{ $rota->estado_final }} - {{ $rota->cidade_final }}</option>
                     @endforeach
